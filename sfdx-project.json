@@ -1,12 +1,36 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "Package Name",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "child-app",
+            "package": "testExtensionPkg",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "Package Name",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        }
+    ],
+    "name": "test2GP",
+    "namespace": "ramyaTest01",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "Package Name": "0Ho5g0000004CPaCAM",
+        "Package Name@0.1.0-1": "04t5g000000YcRBAA0",
+        "Package Name@0.1.0-2": "04t5g000000YcVOAA0",
+        "Package Name@0.1.0-3": "04t5g000000YcW2AAK",
+        "testExtensionPkg": "0Ho5g0000004CPfCAM",
+        "testExtensionPkg@0.1.0-1": "04t5g000000YcW7AAK"
     }
-  ],
-  "name": "test2GP",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
 }
