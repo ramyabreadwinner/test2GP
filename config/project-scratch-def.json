@@ -1,0 +1,15 @@
+{
+  "orgName": "Demo Company",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "hasSampleData": true,
+  "description": "This Scratch Org will be used to implement the XYZ Feature",
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}
