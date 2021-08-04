@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "Package Name",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionName": "v5",
+            "versionNumber": "0.5.0.NEXT"
         },
         {
             "path": "child-app",
@@ -16,7 +16,7 @@
             "dependencies": [
                 {
                     "package": "Package Name",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "0.5.0.LATEST"
                 }
             ]
         }
@@ -31,6 +31,16 @@
         "Package Name@0.1.0-2": "04t5g000000YcVOAA0",
         "Package Name@0.1.0-3": "04t5g000000YcW2AAK",
         "testExtensionPkg": "0Ho5g0000004CPfCAM",
-        "testExtensionPkg@0.1.0-1": "04t5g000000YcW7AAK"
+        "testExtensionPkg@0.1.0-1": "04t5g000000YcW7AAK",
+        "Package Name@0.2.0-1": "04t5g000000YcxTAAS",
+        "Package Name@0.3.0-1": "04t5g000000YcxYAAS",
+        "Package Name@0.3.0-2": "04t5g000000YcxdAAC",
+        "Package Name@0.3.0-3": "04t5g000000YcxnAAC",
+        "Package Name@0.4.0-1": "04t5g000000YcxsAAC",
+        "testExtensionPkg@0.1.0-2": "04t5g000000Yd25AAC",
+        "Package Name@0.4.0-2": "04t5g000000YdGPAA0",
+        "Package Name@0.4.0-3": "04t5g000000YdGUAA0",
+        "Package Name@0.5.0-1": "04t5g000000YdylAAC",
+        "testExtensionPkg@0.1.0-3": "04t5g000000YdyqAAC"
     }
 }
