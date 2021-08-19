@@ -2,18 +2,18 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": false,
+            "default": true,
             "package": "Package Name",
             "versionName": "v7",
             "versionNumber": "0.7.0.NEXT",
-            "ancestorId": "04t5g000000YeO1AAK"
+            "ancestorVersion": "0.6.0.RELEASED"
         },
         {
             "path": "child-app",
             "package": "testExtensionPkg",
             "versionName": "ver 0.3",
             "versionNumber": "0.3.0.NEXT",
-            "default": true,
+            "default": false,
             "dependencies": [
                 {
                     "package": "Package Name",
