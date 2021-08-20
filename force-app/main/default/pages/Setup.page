@@ -4,6 +4,17 @@ isSBInstalled :::: {!isSBInstalled}
 Message ::::: {!message}
 <apex:outputPanel rendered="{!isSBInstalled}">
     This is Stripe Billing Section
+    <apex:pageBlock title="My Content">
+
+        <apex:pageBlockTable value="{!testList}" var="item">
+
+            <apex:column value="{!item.Cust_Name__c}"/>
+            <apex:column value="{!item.Country__c}"/>
+            <apex:column value="{!item.Email__c}"/>
+
+        </apex:pageBlockTable>
+
+    </apex:pageBlock>
 </apex:outputPanel>
 <h1>Congratulations</h1>
 This is your new Page

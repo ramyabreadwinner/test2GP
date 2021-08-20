@@ -1,9 +1,29 @@
+@NamespaceAccessible
 public with sharing class SetupPageController {
     public Boolean isSBInstalled                {get; set;}
-    public String message                       {get; set;}
+    @NamespaceAccessible public String message                       {get; set;}
+    @NamespaceAccessible public List<SObject> testList           {get; set;}
     public SetupPageController() {
         isSBInstalled = FALSE;
+        testList = new List<SObject>();
         isStripeBillingInstalled();
+    }
+    @NamespaceAccessible
+    public void queryRecords(){
+        try{
+            if(isSBInstalled){
+                String queryString = 'SELECT Id, Name, Cust_Name__c, Country__c, Email__c FROM Customer__c';
+                testList = database.query(queryString);
+            }
+            else {
+                String queryString = 'SELECT Id, Name, Cust_Name__c, Country__c, Email__c FROM Customer__c';
+                testList = database.query(queryString);
+            }
+        }
+        catch(Exception e){
+            message = 'Exception : ' + e.getMessage() +' Line Number : '+e.getLineNumber();
+            System.debug('Exception : ' + e.getMessage() +' Line Number : '+e.getLineNumber());
+        }
     }
     public void isStripeBillingInstalled(){
         try{
