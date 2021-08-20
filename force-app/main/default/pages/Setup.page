@@ -1,6 +1,7 @@
 <apex:page controller="SetupPageController" action="{!isStripeBillingInstalled}">
 <!-- Begin Default Content REMOVE THIS -->
 isSBInstalled :::: {!isSBInstalled}
+Message ::::: {!message}
 <apex:outputPanel rendered="{!isSBInstalled}">
     This is Stripe Billing Section
 </apex:outputPanel>
