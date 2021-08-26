@@ -1,6 +1,15 @@
 @IsTest
 private without sharing class CuriousIndeedTest {
     @IsTest
+    private static void testMadNULL () {
+        Test.startTest();
+        Integer resultingLevelOfMad = CuriousIndeed.getMadOrMadder(NULL);
+        System.debug('resultingLevelOfMad ::: '+resultingLevelOfMad);
+        Test.stopTest();
+
+        System.assertEquals(CuriousIndeed.minimumMad, resultingLevelOfMad, 'Should be at least minimum mad.');
+    }
+    @IsTest
     private static void testNotMad () {
         Test.startTest();
         Integer resultingLevelOfMad = CuriousIndeed.getMadOrMadder(0);

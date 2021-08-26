@@ -1,5 +1,16 @@
 @IsTest(SeeAllData=false)
 private with sharing class ChildDemoTest {
+    @IsTest
+	private static void TestCheckHowMad_Incredibly () {
+		Integer controlMad = 20;
+
+		Test.startTest();
+		String resultMadDescription = ChildDemo.checkHowMad(controlMad);
+		Test.stopTest();
+
+		System.assertEquals('Incredibly', resultMadDescription);
+
+	}
 	@IsTest
 	private static void TestCheckHowMad_Somewhat () {
 		Integer controlMad = 1;
@@ -14,18 +25,6 @@ private with sharing class ChildDemoTest {
 
 	@IsTest
 	private static void TestCheckHowMad_Very () {
-		Integer controlMad = 5;
-
-		Test.startTest();
-		String resultMadDescription = ChildDemo.checkHowMad(controlMad);
-		Test.stopTest();
-
-		System.assertEquals('Very', resultMadDescription);
-
-	}
-
-	@IsTest
-	private static void TestCheckHowMad_Incredibly () {
 		Integer controlMad = 5;
 
 		Test.startTest();

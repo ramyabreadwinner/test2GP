@@ -1,22 +1,24 @@
 @NamespaceAccessible
 public with sharing class SetupPageController {
-    public Boolean isSBInstalled                {get; set;}
-    @NamespaceAccessible public String message                       {get; set;}
-    @NamespaceAccessible public List<SObject> testList           {get; set;}
+    public Boolean isSBInstalled                                        {get; set;}
+    @NamespaceAccessible public String message                          {get; set;}
+    @NamespaceAccessible public List<SObject> testList                  {get; set;}
+    @NamespaceAccessible public List<string> fields                     {get; set;}
     public SetupPageController() {
         isSBInstalled = FALSE;
         testList = new List<SObject>();
+        fields = new List<String>();
         isStripeBillingInstalled();
+        queryRecords();
     }
     @NamespaceAccessible
     public void queryRecords(){
         try{
             if(isSBInstalled){
+                message = 'Entered SBInstalled section';
                 String queryString = 'SELECT Id, Name, Cust_Name__c, Country__c, Email__c FROM Customer__c';
-                testList = database.query(queryString);
-            }
-            else {
-                String queryString = 'SELECT Id, Name, Cust_Name__c, Country__c, Email__c FROM Customer__c';
+                fields = queryString.deleteWhiteSpace().toLowerCase().substringBefore('from').substringAfter('select').split(',');
+                system.debug('fields ::: '+fields);
                 testList = database.query(queryString);
             }
         }
@@ -45,9 +47,9 @@ public with sharing class SetupPageController {
                 message = 'Request Sent';
                 system.debug('Response ::: '+res.getBody());
             }
+            Records rc = new Records();
             if(res.getStatusCode() == 200 && res.getBody() != NULL){
                 message = 'Request Sent and Success';
-                Records rc = new Records();
                 rc = (Records)JSON.deserialize(res.getBody(), Records.class);
                 System.debug('rc ::: '+rc);                
                 for(Record rec: rc.records){                

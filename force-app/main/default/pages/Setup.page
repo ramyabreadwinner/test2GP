@@ -2,16 +2,17 @@
 <!-- Begin Default Content REMOVE THIS -->
 isSBInstalled :::: {!isSBInstalled}
 Message ::::: {!message}
+<br/>
+testList ::::: {!testList}<br/>
+fields ::::::: {!fields}
 <apex:outputPanel rendered="{!isSBInstalled}">
     This is Stripe Billing Section
     <apex:pageBlock title="My Content">
 
-        <apex:pageBlockTable value="{!testList}" var="item">
-
-            <apex:column value="{!item.Cust_Name__c}"/>
-            <apex:column value="{!item.Country__c}"/>
-            <apex:column value="{!item.Email__c}"/>
-
+        <apex:pageBlockTable rendered="{!IF(testList.size > 0 , true , false)}"  value="{!testList}" var="item">
+            <apex:repeat value="{!fields}" var="f">
+                <apex:column value="{!item[f]}"/>
+            </apex:repeat>
         </apex:pageBlockTable>
 
     </apex:pageBlock>

@@ -4,9 +4,9 @@
             "path": "force-app",
             "default": true,
             "package": "Package Name",
-            "versionName": "v8",
-            "versionNumber": "0.8.0.NEXT",
-            "ancestorVersion": "0.7.0.RELEASED"
+            "versionName": "v9",
+            "versionNumber": "0.9.0.NEXT",
+            "ancestorVersion": "0.8.0.RELEASED"
         },
         {
             "path": "child-app",
@@ -17,7 +17,7 @@
             "dependencies": [
                 {
                     "package": "Package Name",
-                    "versionNumber": "0.8.0.LATEST"
+                    "versionNumber": "0.9.0.LATEST"
                 }
             ]
         }
@@ -57,6 +57,10 @@
         "Package Name@0.8.0-4": "04t5g000000YhKbAAK",
         "Package Name@0.8.0-6": "04t5g000000YhTkAAK",
         "Package Name@0.8.0-7": "04t5g000000YhTpAAK",
-        "Package Name@0.8.0-8": "04t5g000000YhY2AAK"
+        "Package Name@0.8.0-8": "04t5g000000YhY2AAK",
+        "Package Name@0.8.0-9": "04t5g000000YiF1AAK",
+        "Package Name@0.8.0-11": "04t5g000000YiNWAA0",
+        "testExtensionPkg@0.3.0-1": "04t5g000000YiNbAAK",
+        "Package Name@0.8.0-12": "04t5g000000YiNgAAK"
     }
 }
